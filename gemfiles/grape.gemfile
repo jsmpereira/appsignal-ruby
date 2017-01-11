@@ -3,5 +3,6 @@ source 'https://rubygems.org'
 gem 'grape', '0.14.0'
 gem 'rack', '~> 1.6'
 gem 'activesupport', '~> 4.2'
+gem 'json', git: 'https://github.com/flori/json.git', branch: 'v1.8'
 
 gemspec :path => '../'

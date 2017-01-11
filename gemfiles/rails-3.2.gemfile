@@ -2,5 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 3.2.14'
 gem 'test-unit'
+gem 'json', git: 'https://github.com/flori/json.git', branch: 'v1.8'
 
 gemspec :path => '../'

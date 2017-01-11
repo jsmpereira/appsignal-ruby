@@ -2,5 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.1.0'
 gem 'mime-types', '~> 2.6'
+gem 'json', git: 'https://github.com/flori/json.git', branch: 'v1.8'
 
 gemspec :path => '../'
