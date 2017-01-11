@@ -9,6 +9,7 @@ describe Appsignal::Utils do
         {
           'the' => 'payload',
           'int' => 1,
+          'int_bignum' => 1 << 64,
           'float' => 1.0,
           1 => true,
           nil => 'test',
@@ -21,7 +22,7 @@ describe Appsignal::Utils do
       it { should eq Appsignal::Utils.data_generate(body) }
       it { should_not eq Appsignal::Utils.data_generate({}) }
       it { should_not eq 'a string' }
-      its(:to_s) { should eq %({"":"test","1":true,"bar":null,"baz":{"arr":[1,2],"foo":"bʊr"},"float":1.0,"foo":[1,2,"three",{"foo":"bar"}],"int":1,"the":"payload"}) }
+      its(:to_s) { should eq %({"":"test","1":true,"bar":null,"baz":{"arr":[1,2],"foo":"bʊr"},"float":1.0,"foo":[1,2,"three",{"foo":"bar"}],"int":1,"int_bignum":18446744073709551616,"the":"payload"}) }
     end
 
     context "with a valid array body" do

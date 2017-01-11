@@ -26,8 +26,8 @@ module Appsignal
             case value
             when String
               map.set_string(key, value)
-            when Fixnum
-              map.set_fixnum(key, value)
+            when Integer
+              map.set_integer(key, value)
             when Float
               map.set_float(key, value)
             when TrueClass, FalseClass
@@ -51,8 +51,8 @@ module Appsignal
             case value
             when String
               array.append_string(value)
-            when Fixnum
-              array.append_fixnum(value)
+            when Integer
+              array.append_integer(value)
             when Float
               array.append_float(value)
             when TrueClass, FalseClass
